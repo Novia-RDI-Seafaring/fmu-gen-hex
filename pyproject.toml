@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fmu-gen-hex"
+version = "0.1.0"
+description = "Heat exchanger data sheet to FMU."
+authors = [
+    { name = "Emre Kaya", email = "emre.kaya@novia.fi" },
+    { name = "Mikael Manngård", email = "mikael.manngard@novia.fi" },
+    { name = "Christian Möller", email = "christian.moller@novia.fi" },
+    { name = "Lamin Jatta", email = "lamin.jatta@novia.fi" }
+]
+requires-python = ">= 3.8"
+dependencies = [
+    "gradio",
+    "gradio_pdf",
+    "pdf2image",
+    "numpy",
+    "pandas",
+    "json",
+    "os",
+    "python-dotenv"
+]
+
