@@ -1,2 +1,2 @@
 # fmu-gen-hex
-From pdf to heat-exchanger (hex) FMU
+From pdf to heat-exchanger (hex) to FMU
