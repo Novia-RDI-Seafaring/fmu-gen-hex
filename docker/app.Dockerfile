@@ -40,8 +40,6 @@ RUN pip install /fmu-gen-hex
 # Set the working directory
 WORKDIR /fmu-gen-hex/demo
 
-RUN pip install /fmu_gen_hex
-
 ENV GRADIO_SERVER_NAME="0.0.0.0"
 
 EXPOSE 7860
