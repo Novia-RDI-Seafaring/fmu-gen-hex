@@ -1,0 +1,8 @@
+gradio==4.31.5
+matplotlib==3.8.3
+numpy==1.26.4
+pandas==2.2.2
+python-dotenv==1.0.1
+scipy==1.13.1
+gradio-pdf
+pdf2image

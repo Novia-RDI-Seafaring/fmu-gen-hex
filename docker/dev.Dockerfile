@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 RUN apt-get install -y libgl1-mesa-dev
 RUN apt-get install poppler-utils -y
 RUN apt-get install tesseract-ocr -y
-
+RUN apt-get -y install cmake
 
 ## install conda
 ENV PATH="/root/miniconda3/bin:${PATH}"
@@ -26,6 +26,8 @@ RUN . /root/miniconda3/etc/profile.d/conda.sh && conda activate base
 
 # install torch
 RUN conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia -y
+
+RUN conda install -c conda-forge pyfmi
 
 #RUN conda install git pip -y
 RUN pip install git+https://github.com/Novia-RDI-Seafaring/MERI@main

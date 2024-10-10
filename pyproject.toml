@@ -3,7 +3,7 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "fmu-gen-hex"
+name = "fmu_gen_hex"
 version = "0.1.0"
 description = "Heat exchanger data sheet to FMU."
 authors = [
@@ -14,13 +14,16 @@ authors = [
 ]
 requires-python = ">= 3.8"
 dependencies = [
-    "gradio",
-    "gradio_pdf",
-    "pdf2image",
-    "numpy",
-    "pandas",
-    "json",
-    "os",
-    "python-dotenv"
+    "gradio==4.31.5",
+    #"llama-index==0.9.48",
+    "matplotlib==3.8.3",
+    "numpy==1.26.4",
+    "pandas==2.2.2",
+    "python-dotenv==1.0.1",
+    "scipy==1.13.1",
+    "gradio-pdf",
+    "pdf2image"
 ]
 
+[tool.setuptools]
+packages = ["fmu_gen_hex"]  # Explicitly list your packages

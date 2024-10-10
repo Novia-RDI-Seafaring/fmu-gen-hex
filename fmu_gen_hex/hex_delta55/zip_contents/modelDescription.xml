@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+	fmiVersion="2.0"
+	modelName="hex_delta55"
+	guid="{e1ec4199-143a-11ef-ae6b-e8c8295c8d2e}"
+	version="1.0.0"
+	author="not specified"
+	copyright="not specified"
+	license="not specified"
+	description=""
+	generationTool="ghorwin/FMICodeGenerator@github - C++ Code using FMI support functions from IBK@TU Dresden"
+	generationDateAndTime="2024-05-17T01:47:40Z"
+	variableNamingConvention="structured"
+	numberOfEventIndicators="0">
+
+	<!-- The following properties are the defaults and can be omitted
+		needsExecutionTool="false"
+		canBeInstantiatedOnlyOncePerProcess="false"
+		providesDirectionalDerivative="false"
+
+		CoSim only:
+		canRunAsynchronuously = "false"
+
+	-->
+
+	<ModelExchange
+		modelIdentifier="hex_delta55"
+		completedIntegratorStepNotNeeded="true"
+		canNotUseMemoryManagementFunctions="true"
+		canGetAndSetFMUstate="true"
+		canSerializeFMUstate="true"
+	/>
+
+	<CoSimulation
+		modelIdentifier="hex_delta55"
+		canHandleVariableCommunicationStepSize="true"
+		canInterpolateInputs="false"
+		maxOutputDerivativeOrder="0"
+		canNotUseMemoryManagementFunctions="true"
+		canGetAndSetFMUstate="true"
+		canSerializeFMUstate="true"
+	/>
+
+	<LogCategories>
+		<Category name="logStatusWarning" />
+		<Category name="logStatusError" />
+		<Category name="logAll" />
+		<Category name="logFmi2Call" />
+	</LogCategories>
+
+	<DefaultExperiment startTime="0.0" stopTime="10.0" tolerance="1e-06"/>
+
+	<ModelVariables>
+
+		<!-- For input variables we need to give a 'start' attribute -->
+		<!-- For output variables with initial="exact" we need to give a 'start' attribute -->
+		
+
+		<!-- Index of variable = "1" -->
+		<ScalarVariable
+			name="T1_in"
+            description="side 1 inlet temperature"
+			valueReference="1"
+			variability="continuous"
+			causality="input"
+			initial="exact">
+			<Real start="68"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "2" -->
+		<ScalarVariable
+			name="T2_in"
+            description="side 2 inlet temperature"
+			valueReference="2"
+			variability="continuous"
+			causality="input"
+			initial="exact">
+			<Real start="91"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "3" -->
+		<ScalarVariable
+			name="m1"
+            description="fluid mass at side 1"
+			valueReference="3"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="400"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "4" -->
+		<ScalarVariable
+			name="m2"
+            description="fluid mass at side 2"
+			valueReference="4"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="400"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "5" -->
+		<ScalarVariable
+			name="mdot1_in"
+            description="fluid flow rate at side 1"
+			valueReference="5"
+			variability="continuous"
+			causality="input"
+			initial="exact">
+			<Real start="46"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "6" -->
+		<ScalarVariable
+			name="mdot2_in"
+            description="fluid flow rate at side 2"
+			valueReference="6"
+			variability="continuous"
+			causality="input"
+			initial="exact">
+			<Real start="56"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "7" -->
+		<ScalarVariable
+			name="cp1"
+            description="specific temperature of fluid at side 1"
+			valueReference="7"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="4190"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "8" -->
+		<ScalarVariable
+			name="cp2"
+            description="specific temperature of fluid at side 2"
+			valueReference="8"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="4190"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "9" -->
+		<ScalarVariable
+			name="K"
+            description="heat transfer coefficient"
+			valueReference="9"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="100"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "10" -->
+		<ScalarVariable
+			name="T1_out"
+            description="side 1 outlet temperature"
+			valueReference="10"
+			variability="continuous"
+			causality="output"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "11" -->
+		<ScalarVariable
+			name="T2_out"
+            description="side 2 outlet temperature"
+			valueReference="11"
+			variability="continuous"
+			causality="output"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "12" -->
+		<ScalarVariable
+			name="ncells"
+            description="number of cells"
+			valueReference="12"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Integer start="10"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "13" -->
+		<ScalarVariable
+			name="Counterflow"
+            description="set 1 if Counter flow, set 0 if Parallel flow"
+			valueReference="13"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Boolean start="0"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "14" -->
+		<ScalarVariable
+			name="T1_out0"
+            description="T1_out of the zeroth cell"
+			valueReference="14"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "15" -->
+		<ScalarVariable
+			name="T2_out1"
+            description="T2_out of the 1th cell"
+			valueReference="15"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "16" -->
+		<ScalarVariable
+			name="T1_out1"
+            description="T1_out of the 1th cell"
+			valueReference="16"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "17" -->
+		<ScalarVariable
+			name="T2_out2"
+            description="T2_out of the 2nd cell"
+			valueReference="17"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "18" -->
+		<ScalarVariable
+			name="T1_out2"
+			valueReference="18"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "19" -->
+		<ScalarVariable
+			name="T2_out3"
+			valueReference="19"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "20" -->
+		<ScalarVariable
+			name="T1_out3"
+			valueReference="20"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "21" -->
+		<ScalarVariable
+			name="T2_out4"
+			valueReference="21"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "22" -->
+		<ScalarVariable
+			name="T1_out4"
+			valueReference="22"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "23" -->
+		<ScalarVariable
+			name="T2_out5"
+			valueReference="23"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "24" -->
+		<ScalarVariable
+			name="T1_out5"
+			valueReference="24"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "25" -->
+		<ScalarVariable
+			name="T2_out6"
+			valueReference="25"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "26" -->
+		<ScalarVariable
+			name="T1_out6"
+			valueReference="26"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "27" -->
+		<ScalarVariable
+			name="T2_out7"
+			valueReference="27"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "28" -->
+		<ScalarVariable
+			name="T1_out7"
+			valueReference="28"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "29" -->
+		<ScalarVariable
+			name="T2_out8"
+			valueReference="29"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "30" -->
+		<ScalarVariable
+			name="T1_out8"
+			valueReference="30"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "31" -->
+		<ScalarVariable
+			name="T2_out9"
+			valueReference="31"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "32" -->
+		<ScalarVariable
+			name="T1_ini"
+            description="initial value of T1_outs"
+			valueReference="32"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="68"/>
+		</ScalarVariable>
+		
+
+		<!-- Index of variable = "33" -->
+		<ScalarVariable
+			name="T2_ini"
+            description="initial value of T2_outs"
+			valueReference="33"
+			variability="fixed"
+			causality="parameter"
+			initial="exact">
+			<Real start="91"/>
+		</ScalarVariable>
+
+		<!-- Index of variable = "34" -->
+		<ScalarVariable
+			name="T2_out0"
+			valueReference="34"
+			variability="continuous"
+			causality="local"
+			initial="calculated">
+			<Real/>
+		</ScalarVariable>		
+	</ModelVariables>
+
+	<ModelStructure>
+		<Outputs>
+			<!-- dependencies must be defined for all output quantities. 'dependencyKind' is only needed
+				when some dependencies are constant factors or parameters.
+			-->
+
+			<Unknown index="10" dependencies="1 2 5 6"/>
+			<Unknown index="11" dependencies="1 2 5 6"/>
+		</Outputs>
+	</ModelStructure>
+
+</fmiModelDescription>
+

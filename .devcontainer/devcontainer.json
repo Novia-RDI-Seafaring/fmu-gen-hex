@@ -9,7 +9,7 @@
 	"forwardPorts": [7860], 
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	//"postCreateCommand": "pip install -e .",
+	"postCreateCommand": "pip install -e .",
 	"runArgs": [
 		"--gpus=all",
 		"--network=host"

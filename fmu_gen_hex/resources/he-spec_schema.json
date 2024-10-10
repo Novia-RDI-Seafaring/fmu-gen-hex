@@ -1,0 +1,398 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "Data sheet for a heat exchanger of a ship",
+    "definitions": {
+        "bbox": {
+            "type": "array",
+            "items": {
+                "type": "number"
+            },
+            "minItems": 4,
+            "maxItems": 4
+        },
+        "pageIndex": {
+            "description": "Index of the page where the attribute is found",
+            "type": "integer"
+        },
+        "parameter_properties": {
+            "type": "object",
+            "properties": {
+                "value": {
+                    "type": ["number", "string"]
+                },
+                "text": {
+                    "type": "string"
+                },
+                "unit": {
+                    "type": "string"
+                },
+                "bbox": {
+                    "$ref": "#/definitions/bbox"
+                },
+                "pageIndex": {
+                    "$ref": "#/definitions/pageIndex"
+                }
+            },
+            "required": [
+                "value",
+                "text",
+                "unit",
+                "bbox",
+                "pageIndex"
+            ]
+        }
+    },
+    "type": "object",
+    "properties": {
+        "title": {
+            "label": "Title",
+            "description": "Title of the data sheet",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "riskFactor": {
+            "label": "RiskFactor",
+            "description": "Risk factor of the specified product",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "customerName": {
+            "label": "CustomerName",
+            "description": "Customer to whom specification is dedicated to",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "supplier": {
+            "label": "Supplier",
+            "description": "Company that produces/supplies the specified product",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "itemNumber": {
+            "label": "ItemNumber",
+            "description": "Number of the specified product",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "model": {
+            "label": "Model",
+            "description": "Model that is being specified",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "date": {
+            "label": "Date",
+            "description": "Date when the specification was formulated",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "place": {
+            "label": "Place",
+            "description": "Place where the specification was formulated",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "ref": {
+            "label": "Reference",
+            "description": "Reference to the specified product",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1TestPressure": {
+            "label": "Side1TestPressure",
+            "description": "Test pressure of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1DesignPressure": {
+            "label": "Side1DesignPressure",
+            "description": "Design pressure of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1MaxTemperature": {
+            "label": "Side1MaxTemperature",
+            "description": "Maximal temperature of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1MinTemperature": {
+            "label": "Side1MinTemperature",
+            "description": "Minimal temperature of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1NetWeight": {
+            "label": "Side1NetWeight",
+            "description": "Net weight of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1WeightWithWater": {
+            "label": "Side1WeightWithWater",
+            "description": "Weight of side 1 if filled with water",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1HeatingSurface": {
+            "label": "Side1HeatingSurface",
+            "description": "Heating surface of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1CoolingCapacity": {
+            "label": "Side1CoolingCapacity",
+            "description": "Cooling capacity of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1HeatTransferCoefficient": {
+            "label": "Side1HeatTransferCoefficient",
+            "description": "Heat transfer coefficient of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1Media": {
+            "label": "Side1Media",
+            "description": "Media of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1SpecificHeatCapacity": {
+            "label": "Side1SpecificHeatCapacity",
+            "description": "Specific heat capacity of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1InletTemperature": {
+            "label": "Side1InletTemperature",
+            "description": "Inlet temperature of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1OutletTemperature": {
+            "label": "Side1OutletTemperature",
+            "description": "Outlet temperature of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1FlowRate": {
+            "label": "Side1FlowRate",
+            "description": "Flow rate of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side1LiquidVolume": {
+            "label": "Side1LiquidVolume",
+            "description": "Liquid volume of side 1",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2TestPressure": {
+            "label": "Side2TestPressure",
+            "description": "Test pressure of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2DesignPressure": {
+            "label": "Side2DesignPressure",
+            "description": "Design pressure of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2MaxTemperature": {
+            "label": "Side2MaxTemperature",
+            "description": "Maximal temperature of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2MinTemperature": {
+            "label": "Side2MinTemperature",
+            "description": "Minimal temperature of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2Media": {
+            "label": "Side2Media",
+            "description": "Media of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2SpecificHeatCapacity": {
+            "label": "Side2SpecificHeatCapacity",
+            "description": "Specific heat capacity of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2InletTemperature": {
+            "label": "Side2InletTemperature",
+            "description": "Inlet temperature of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2OutletTemperature": {
+            "label": "Side2OutletTemperature",
+            "description": "Outlet temperature of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2FlowRate": {
+            "label": "Side2FlowRate",
+            "description": "Flow rate of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "side2LiquidVolume": {
+            "label": "Side2LiquidVolume",
+            "description": "Liquid volume of side 2",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        },
+        "drawingDimensions": {
+            "label": "DrawingDimensions",
+            "description": "Dimensions of the embedding drawing/image",
+            "type": "object",
+            "properties": {
+                "parameter_properties": {
+                    "$ref": "#/definitions/parameter_properties"
+                }
+            }
+        }
+    }
+}
