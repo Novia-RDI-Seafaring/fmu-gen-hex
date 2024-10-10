@@ -26,4 +26,6 @@ dependencies = [
 
 [tool.setuptools]
 packages = ["fmu_gen_hex"]  # Explicitly list your packages
-include = ["fmu_gen_hex/resources/*.json"]  # Include all .json files
+
+[tool.setuptools.package-data]
+"hex_schema" = ["fmu_gen_hex/recources/*.json"]
