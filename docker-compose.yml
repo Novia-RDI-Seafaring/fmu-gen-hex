@@ -1,0 +1,10 @@
+services:
+
+  fmu_gen_hex_demo:
+    container_name: fmu_gen_hex_demo
+    build:
+      context: .
+      dockerfile: docker/app.Dockerfile
+    restart: unless-stopped
+    ports:
+    - 5012:5012
